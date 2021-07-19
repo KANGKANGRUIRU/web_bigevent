@@ -48,7 +48,7 @@ $(function () {
             password: $('#form_reg [name=password]').val()
         }
         $.post(
-            'http://api-breakingnews-web.itheima.net/api/reguser', date,
+            '/api/reguser', date,
             function (res) {
                 if (res.status !== 0) {
                     return layer.msg(res.message)
@@ -64,7 +64,7 @@ $(function () {
         // 阻止默认的提交行为
         e.preventDefault()
         $.ajax({
-            url: 'api/login',
+            url: '/api/login',
             method: 'POST',
             //快速获取表单的数据
 
